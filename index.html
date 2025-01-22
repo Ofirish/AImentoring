@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Mentoring Program</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+    }
+
+    .profile h1 {
+      margin: 10px 0 5px;
+      font-size: 2em;
+    }
+
+    .profile p {
+      font-size: 1.1em;
+      color: #ddd;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .tab-button {
+      background: #444;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .tab-button.active {
+      background: #23a6d5;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .links a {
+      display: block;
+      margin: 10px 0;
+      color: #23a6d5;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    .links a:hover {
+      color: #e73c7e;
+    }
+
+    .links i {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <img src="your-photo.jpg" alt="Your Name">
+      <h1>Your Name</h1>
+      <p>Short bio about yourself and your role in the AI mentoring program.</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-button active" data-tab="text">Text AI</button>
+      <button class="tab-button" data-tab="image">Image AI</button>
+      <button class="tab-button" data-tab="audio">Audio AI</button>
+      <button class="tab-button" data-tab="video">Video AI</button>
+    </div>
+
+    <div id="text" class="tab-content active">
+      <div class="links">
+        <a href="https://openai.com/blog/chatgpt" target="_blank"><i class="fas fa-comment"></i>ChatGPT - Text Generation</a>
+        <a href="https://www.copy.ai" target="_blank"><i class="fas fa-pen-alt"></i>Copy.ai - AI Writing Assistant</a>
+        <a href="https://www.gpt-3.com" target="_blank"><i class="fas fa-brain"></i>GPT-3 - Advanced Text AI</a>
+      </div>
+    </div>
+
+    <div id="image" class="tab-content">
+      <div class="links">
+        <a href="https://www.dalle2.com" target="_blank"><i class="fas fa-image"></i>DALL·E 2 - Image Generation</a>
+        <a href="https://www.midjourney.com" target="_blank"><i class="fas fa-paint-brush"></i>MidJourney - AI Art</a>
+        <a href="https://www.deepai.org" target="_blank"><i class="fas fa-camera"></i>DeepAI - Image Tools</a>
+      </div>
+    </div>
+
+    <div id="audio" class="tab-content">
+      <div class="links">
+        <a href="https://www.descript.com" target="_blank"><i class="fas fa-microphone"></i>Descript - Audio Editing</a>
+        <a href="https://www.speechify.com" target="_blank"><i class="fas fa-headphones"></i>Speechify - Text to Speech</a>
+        <a href="https://www.murf.ai" target="_blank"><i class="fas fa-music"></i>Murf.ai - AI Voiceovers</a>
+      </div>
+    </div>
+
+    <div id="video" class="tab-content">
+      <div class="links">
+        <a href="https://www.synthesia.io" target="_blank"><i class="fas fa-video"></i>Synthesia - AI Video Generation</a>
+        <a href="https://www.pictory.ai" target="_blank"><i class="fas fa-film"></i>Pictory - Video Summarization</a>
+        <a href="https://www.runwayml.com" target="_blank"><i class="fas fa-play-circle"></i>Runway ML - Video Editing</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const tabId = button.getAttribute('data-tab');
+
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
