@@ -56,6 +56,8 @@
       display: flex;
       justify-content: center;
       margin: 20px 0;
+      overflow-x: auto; /* Allow horizontal scrolling on small screens */
+      white-space: nowrap; /* Prevent wrapping of tab buttons */
     }
 
     .tab-button {
@@ -67,6 +69,7 @@
       cursor: pointer;
       border-radius: 5px;
       transition: background 0.3s;
+      flex-shrink: 0; /* Prevent buttons from shrinking */
     }
 
     .tab-button.active {
@@ -100,6 +103,44 @@
     .links i {
       margin-right: 10px;
     }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px auto;
+        padding: 15px;
+      }
+
+      .profile img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .profile h1 {
+        font-size: 1.5em;
+      }
+
+      .profile p {
+        font-size: 1em;
+      }
+
+      .tabs {
+        justify-content: flex-start; /* Align tabs to the left on mobile */
+      }
+
+      .tab-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+      }
+
+      .tab-content {
+        padding: 15px;
+      }
+
+      .links a {
+        font-size: 1em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -121,6 +162,7 @@ Whether it’s for work or personal projects, I’m constantly amazed by the pos
       <button class="tab-button" data-tab="audio">Audio AI</button>
       <button class="tab-button" data-tab="video">Video AI</button>
       <button class="tab-button" data-tab="repositories">Repositories</button>
+      <button class="tab-button" data-tab="ed-ai">Ed. AI</button> <!-- New Tab -->
     </div>
 
     <div id="text" class="tab-content active">
@@ -160,8 +202,18 @@ Whether it’s for work or personal projects, I’m constantly amazed by the pos
     <div id="repositories" class="tab-content">
       <div class="links">
         <a href="https://theresanaiforthat.com/s/free/" target="_blank"><i class="fas fa-database"></i>There's an AI for That - AI Repository</a>
-        <a href="https://www.aixploria.com" target="_blank"><i class="fa-regular fa-bookmark"></i></i>AI Tools Directory</a>
+        <a href="https://www.aixploria.com" target="_blank"><i class="fa-regular fa-bookmark"></i>AI Tools Directory</a>
         <a href="https://www.futuretools.io/" target="_blank"><i class="fa-solid fa-bars"></i>future Tools - AI Tools Library</a>
+      </div>
+    </div>
+
+    <!-- New Ed. AI Tab -->
+    <div id="ed-ai" class="tab-content">
+      <div class="links">
+        <a href="https://morai.mindcet.org/" target="_blank"><i class="fas fa-school"></i>morai - מאגר כלים להוראה</a>
+        <a href="https://skillcet.mindcet.org/" target="_blank"><i class="fas fa-school"></i>Skillcet - בניית מערכי שיעור</a>
+        <a href="https://www.magicschool.ai/" target="_blank"><i class="fas fa-school"></i>magicschool - מגוון כלים למורים</a>
+        <a href="https://websim.ai/" target="_blank"><i class="fas fa-school"></i>websim.ai - בניית משחקים להוראה</a>
       </div>
     </div>
   </div>
@@ -183,4 +235,4 @@ Whether it’s for work or personal projects, I’m constantly amazed by the pos
     });
   </script>
 </body>
-</html
+</html>
