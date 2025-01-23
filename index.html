@@ -29,6 +29,7 @@
       background: rgba(0, 0, 0, 0.7);
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      position: relative;
     }
 
     .profile {
@@ -50,6 +51,16 @@
     .profile p {
       font-size: 1.1em;
       color: #ddd;
+      line-height: 1.6; /* Improved readability */
+      margin: 20px 0; /* Added margin for better spacing */
+    }
+
+    .scroll-hint {
+      text-align: center;
+      font-size: 0.9em;
+      color: #ddd;
+      margin: 10px 0;
+      display: none; /* Hidden by default */
     }
 
     .tabs {
@@ -104,6 +115,30 @@
       margin-right: 10px;
     }
 
+    /* Floating Button */
+    #floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #23a6d5;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+    }
+
+    #floating-button:hover {
+      background-color: #1e8bb8;
+    }
+
     /* Mobile Responsiveness */
     @media (max-width: 768px) {
       .container {
@@ -122,6 +157,11 @@
 
       .profile p {
         font-size: 1em;
+        line-height: 1.5; /* Adjusted for mobile readability */
+      }
+
+      .scroll-hint {
+        display: block; /* Show scroll hint on mobile */
       }
 
       .tabs {
@@ -156,13 +196,18 @@ I’m a proud husband and father of two, and my passion for technology extends b
 Whether it’s for work or personal projects, I’m constantly amazed by the possibilities AI brings to the table, and I’m excited to share this journey with others as part of the AI mentoring program.</p>
     </div>
 
+    <!-- Scroll Hint -->
+    <div class="scroll-hint">
+      <-- scroll for more -->
+    </div>
+
     <div class="tabs">
       <button class="tab-button active" data-tab="text">Text AI</button>
       <button class="tab-button" data-tab="image">Image AI</button>
       <button class="tab-button" data-tab="audio">Audio AI</button>
       <button class="tab-button" data-tab="video">Video AI</button>
       <button class="tab-button" data-tab="repositories">Repositories</button>
-      <button class="tab-button" data-tab="ed-ai">Ed. AI</button> <!-- New Tab -->
+      <button class="tab-button" data-tab="ed-ai">Ed. AI</button>
     </div>
 
     <div id="text" class="tab-content active">
@@ -210,13 +255,18 @@ Whether it’s for work or personal projects, I’m constantly amazed by the pos
     <!-- New Ed. AI Tab -->
     <div id="ed-ai" class="tab-content">
       <div class="links">
-        <a href="https://morai.mindcet.org/" target="_blank"><i class="fas fa-school"></i>morai - מאגר כלים להוראה</a>
-        <a href="https://skillcet.mindcet.org/" target="_blank"><i class="fas fa-school"></i>Skillcet - בניית מערכי שיעור</a>
-        <a href="https://www.magicschool.ai/" target="_blank"><i class="fas fa-school"></i>magicschool - מגוון כלים למורים</a>
-        <a href="https://websim.ai/" target="_blank"><i class="fas fa-school"></i>websim.ai - בניית משחקים להוראה</a>
+        <a href="https://edu.gov.il/" target="_blank"><i class="fas fa-school"></i>משרד החינוך - Ministry of Education</a>
+        <a href="https://www.moital.gov.il/" target="_blank"><i class="fas fa-lightbulb"></i>AI Resources for Teachers (Hebrew)</a>
+        <a href="https://www.telem.org.il/" target="_blank"><i class="fas fa-book"></i>Telem - Educational AI Tools</a>
+        <a href="https://www.snunit.k12.il/" target="_blank"><i class="fas fa-graduation-cap"></i>Snunit - AI in Education</a>
       </div>
     </div>
   </div>
+
+  <!-- Floating Button -->
+  <button id="floating-button" onclick="scrollToTabs()">
+    <i class="fas fa-arrow-down"></i>
+  </button>
 
   <script>
     const tabButtons = document.querySelectorAll('.tab-button');
@@ -233,6 +283,11 @@ Whether it’s for work or personal projects, I’m constantly amazed by the pos
         document.getElementById(tabId).classList.add('active');
       });
     });
+
+    // Scroll to Tabs Function
+    function scrollToTabs() {
+      document.querySelector('.tabs').scrollIntoView({ behavior: 'smooth' });
+    }
   </script>
 </body>
 </html>
