@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
       margin: 0;
       padding: 0;
       background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -48,11 +48,24 @@
       font-size: 2em;
     }
 
-    .profile p {
+    .bio-section {
+      margin: 20px 0;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+
+    .bio-section h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #23a6d5;
+    }
+
+    .bio-section p {
       font-size: 1.1em;
       color: #ddd;
       line-height: 1.6; /* Improved readability */
-      margin: 20px 0; /* Added margin for better spacing */
+      margin: 0;
     }
 
     .scroll-hint {
@@ -155,7 +168,11 @@
         font-size: 1.5em;
       }
 
-      .profile p {
+      .bio-section h2 {
+        font-size: 1.3em;
+      }
+
+      .bio-section p {
         font-size: 1em;
         line-height: 1.5; /* Adjusted for mobile readability */
       }
@@ -188,12 +205,22 @@
     <div class="profile">
       <img src="https://github.com/Ofirish/AImentoring/blob/main/Ofir4AI.png?raw=true" alt="Ofir Wainstein">
       <h1>Ofir Wainstein - KM Expert</h1>
-      <p>About Me
-With over 30 years of experience in the world of computers, I’ve witnessed the incredible evolution of technology firsthand. For the past 24 years, I’ve dedicated my career to the field of Knowledge Management and its infrastructure, helping organizations harness the power of information to drive innovation and growth.
+    </div>
 
-I’m a proud husband and father of two, and my passion for technology extends beyond the workplace—I’ve been exploring and working with AI since its earliest days. From its first steps to the transformative force it is today, I’ve embraced AI as both a professional tool and a personal passion, using it daily to solve problems, create, and inspire.
+    <!-- Bio Sections -->
+    <div class="bio-section">
+      <h2>Introduction</h2>
+      <p>With over 30 years of experience in the world of computers, I’ve witnessed the incredible evolution of technology firsthand. For the past 24 years, I’ve dedicated my career to the field of Knowledge Management and its infrastructure, helping organizations harness the power of information to drive innovation and growth.</p>
+    </div>
 
-Whether it’s for work or personal projects, I’m constantly amazed by the possibilities AI brings to the table, and I’m excited to share this journey with others as part of the AI mentoring program.</p>
+    <div class="bio-section">
+      <h2>Personal Life</h2>
+      <p>I’m a proud husband and father of two, and my passion for technology extends beyond the workplace—I’ve been exploring and working with AI since its earliest days.</p>
+    </div>
+
+    <div class="bio-section">
+      <h2>Passion for AI</h2>
+      <p>From its first steps to the transformative force it is today, I’ve embraced AI as both a professional tool and a personal passion, using it daily to solve problems, create, and inspire. Whether it’s for work or personal projects, I’m constantly amazed by the possibilities AI brings to the table, and I’m excited to share this journey with others as part of the AI mentoring program.</p>
     </div>
 
     <!-- Scroll Hint -->
