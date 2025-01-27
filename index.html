@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Mentoring Program</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
@@ -53,6 +54,7 @@
       padding: 15px;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 10px;
+      display: none; /* Hidden by default */
     }
 
     .bio-section h2 {
@@ -137,9 +139,9 @@
       color: #fff;
       border: none;
       border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 24px;
+      width: auto; /* Adjust width for text */
+      padding: 10px 20px; /* Adjust padding for text */
+      font-size: 16px; /* Adjust font size for text */
       cursor: pointer;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       display: flex;
@@ -149,6 +151,26 @@
     }
 
     #floating-button:hover {
+      background-color: #1e8bb8;
+    }
+
+    /* Bio Button */
+    #bio-button {
+      background-color: #23a6d5;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1.1em;
+      margin: 20px 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+      animation: animate__animated animate__pulse animate__infinite;
+    }
+
+    #bio-button:hover {
       background-color: #1e8bb8;
     }
 
@@ -206,6 +228,9 @@
       <img src="https://github.com/Ofirish/AImentoring/blob/main/Ofir4AI.png?raw=true" alt="Ofir Wainstein">
       <h1>Ofir Wainstein - KM Expert</h1>
     </div>
+
+    <!-- Bio Button -->
+    <button id="bio-button">BIO</button>
 
     <!-- Bio Sections -->
     <div class="bio-section">
@@ -292,7 +317,7 @@
 
   <!-- Floating Button -->
   <button id="floating-button" onclick="scrollToTabs()">
-    <i class="fas fa-arrow-down"></i>
+    Click me for AI's
   </button>
 
   <script>
@@ -315,6 +340,15 @@
     function scrollToTabs() {
       document.querySelector('.tabs').scrollIntoView({ behavior: 'smooth' });
     }
+
+    const bioButton = document.getElementById('bio-button');
+    const bioSections = document.querySelectorAll('.bio-section');
+
+    bioButton.addEventListener('click', () => {
+      bioSections.forEach(section => {
+        section.style.display = section.style.display === 'none' ? 'block' : 'none';
+      });
+    });
   </script>
 </body>
 </html>
