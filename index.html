@@ -332,6 +332,32 @@
     #suggestions-form button:hover {
       background-color: #1e8bb8;
     }
+    .legend {
+  margin-top: 30px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.legend h3 {
+  margin-bottom: 10px;
+  color: #23a6d5;
+}
+
+.legend ul {
+  list-style: none;
+  padding: 0;
+}
+
+.legend li {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #ddd;
+}
+
+.legend .pricing-scheme {
+  margin-right: 10px;
+}
   </style>
 </head>
 <body>
@@ -429,6 +455,15 @@
         <a href="https://www.snunit.k12.il/" target="_blank"><i class="fas fa-graduation-cap"></i>Snunit - AI in Education <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i></span></a>
       </div>
     </div>
+    <!-- Add this just before the closing </div> tag for .container -->
+<div class="legend">
+  <h3>Pricing Legend:</h3>
+  <ul>
+    <li><span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i></span> Free</li>
+    <li><span class="pricing-scheme"><i class="fas fa-dollar-sign free-paid"></i></span> Free + Paid</li>
+    <li><span class="pricing-scheme"><i class="fas fa-dollar-sign paid"></i></span> Only Paid</li>
+  </ul>
+</div>
   </div>
 
   <!-- Floating Button -->
@@ -438,7 +473,7 @@
 
   <!-- Suggestions Box -->
   <button id="suggestions-box">
-    <i class="fas fa-lightbulb"></i>
+    <i class="fas fa-lightbulb">Suggestions</i>
   </button>
 
   <!-- Suggestions Form -->
