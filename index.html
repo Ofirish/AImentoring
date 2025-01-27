@@ -319,14 +319,22 @@
     }
 
     #suggestions-form button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
       background-color: #23a6d5;
       color: #fff;
       border: none;
-      padding: 10px 20px;
+      border-radius: 50%;
+      width: auto; /* Adjust width for text */
+      padding: 10px 20px; /* Adjust padding for text */
+      font-size: 16px; /* Adjust font size for text */
       cursor: pointer;
-      border-radius: 5px;
-      width: 100%;
-      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
     }
 
     #suggestions-form button:hover {
