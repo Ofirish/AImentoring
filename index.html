@@ -274,27 +274,27 @@
     }
 
     #suggestions-box {
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      background-color: #23a6d5;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 24px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s;
-    }
+  position: fixed;
+  bottom: 90px; /* Adjust this value to position it above the AI Floating Button */
+  right: 20px;
+  background-color: #23a6d5;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: auto; /* Adjust width for text */
+  padding: 10px 20px; /* Adjust padding for text */
+  font-size: 16px; /* Adjust font size for text */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
 
-    #suggestions-box:hover {
-      background-color: #1e8bb8;
-    }
+#suggestions-box:hover {
+  background-color: #1e8bb8;
+}
 
     #suggestions-form {
       display: none;
@@ -481,7 +481,7 @@
 
   <!-- Suggestions Box -->
   <button id="suggestions-box">
-    <i class="fas fa-lightbulb">Suggestions</i>
+    <i class="fas fa-lightbulb"></i>Suggestions
   </button>
 
   <!-- Suggestions Form -->
