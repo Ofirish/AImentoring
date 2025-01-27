@@ -34,7 +34,10 @@
     }
 
     .profile {
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
 
     .profile img {
@@ -42,11 +45,37 @@
       height: 150px;
       border-radius: 50%;
       border: 5px solid #fff;
+      margin-bottom: 20px;
     }
 
     .profile h1 {
       margin: 10px 0 5px;
-      font-size: 2em;
+      font-size: 1.5em;
+    }
+
+    .profile h2 {
+      margin: 5px 0;
+      font-size: 1.2em;
+      color: #ddd;
+    }
+
+    @media (min-width: 768px) {
+      .profile {
+        flex-direction: row;
+      }
+
+      .profile img {
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+
+      .profile h1 {
+        font-size: 2em;
+      }
+
+      .profile h2 {
+        font-size: 1.5em;
+      }
     }
 
     .bio-section {
@@ -220,13 +249,76 @@
         font-size: 1em;
       }
     }
+
+    #suggestions-box {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background-color: #23a6d5;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+    }
+
+    #suggestions-box:hover {
+      background-color: #1e8bb8;
+    }
+
+    #suggestions-form {
+      display: none;
+      position: fixed;
+      bottom: 140px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      max-width: 300px;
+      width: 100%;
+    }
+
+    #suggestions-form input,
+    #suggestions-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #suggestions-form button {
+      background-color: #23a6d5;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 100%;
+      text-align: center;
+    }
+
+    #suggestions-form button:hover {
+      background-color: #1e8bb8;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="profile">
       <img src="https://github.com/Ofirish/AImentoring/blob/main/Ofir4AI.png?raw=true" alt="Ofir Wainstein">
-      <h1>Ofir Wainstein - KM Expert</h1>
+      <div>
+        <h1>AI for All - כלי בינה מלאכותית</h1>
+        <h2>Ofir Wainstein - KM Expert</h2>
+      </div>
     </div>
 
     <!-- Bio Button -->
@@ -320,6 +412,22 @@
     Click me for AI's
   </button>
 
+  <!-- Suggestions Box -->
+  <button id="suggestions-box">
+    <i class="fas fa-lightbulb"></i>
+  </button>
+
+  <!-- Suggestions Form -->
+  <div id="suggestions-form">
+    <h3>Suggestions</h3>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="suggestion" placeholder="Your Suggestion" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
   <script>
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
@@ -348,6 +456,13 @@
       bioSections.forEach(section => {
         section.style.display = section.style.display === 'none' ? 'block' : 'none';
       });
+    });
+
+    const suggestionsBox = document.getElementById('suggestions-box');
+    const suggestionsForm = document.getElementById('suggestions-form');
+
+    suggestionsBox.addEventListener('click', () => {
+      suggestionsForm.style.display = suggestionsForm.style.display === 'none' ? 'block' : 'none';
     });
   </script>
 </body>
