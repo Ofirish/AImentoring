@@ -159,6 +159,30 @@
       margin-right: 10px;
     }
 
+    /* Pricing Scheme Styles */
+    .pricing-scheme {
+      display: block;
+      margin: 5px 0 15px 30px; /* Adjust margin to align with links */
+      font-size: 0.9em;
+      color: #ddd;
+    }
+
+    .pricing-scheme i {
+      margin-right: 5px;
+    }
+
+    .pricing-scheme .free {
+      color: #4caf50; /* Green for Free */
+    }
+
+    .pricing-scheme .free-paid {
+      color: #ff9800; /* Orange for Free+Paid */
+    }
+
+    .pricing-scheme .paid {
+      color: #f44336; /* Red for Only Paid */
+    }
+
     /* Floating Button */
     #floating-button {
       position: fixed;
@@ -357,42 +381,61 @@
     <div id="text" class="tab-content active">
       <div class="links">
         <a href="https://chatgpt.com/" target="_blank"><i class="fas fa-comments"></i>ChatGPT - Text Generation</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i> Free</span>
         <a href="https://app.mindsmith.ai/create-new" target="_blank"><i class="fas fa-chalkboard-teacher"></i>MindSmith - Create Lessons</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free-paid"></i> Free+Paid</span>
         <a href="https://gemini.google.com/app" target="_blank"><i class="fas fa-robot"></i>Gemini - Google Helper AI</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i> Free</span>
         <a href="https://chat.deepseek.com/" target="_blank"><i class="fas fa-comment-dots"></i>DeepSeek - ChatBot</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i> Free</span>
       </div>
     </div>
 
     <div id="image" class="tab-content">
       <div class="links">
         <a href="https://openart.ai/" target="_blank"><i class="fas fa-palette"></i>Openart AI - Image Generation</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free-paid"></i> Free+Paid</span>
         <a href="https://www.midjourney.com" target="_blank"><i class="fas fa-paint-brush"></i>MidJourney - AI Art</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign paid"></i> Only Paid</span>
         <a href="https://www.deepai.org" target="_blank"><i class="fas fa-camera-retro"></i>DeepAI - Image Tools</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i> Free</span>
         <a href="https://creator.nightcafe.studio/" target="_blank"><i class="fas fa-moon"></i>NightCafe - Art Hub</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free-paid"></i> Free+Paid</span>
       </div>
     </div>
 
     <div id="audio" class="tab-content">
       <div class="links">
         <a href="https://www.descript.com" target="_blank"><i class="fas fa-microphone-alt"></i>Descript - Audio Editing</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free-paid"></i> Free+Paid</span>
         <a href="https://www.speechify.com" target="_blank"><i class="fas fa-headphones-alt"></i>Speechify - Text to Speech</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign paid"></i> Only Paid</span>
         <a href="https://www.murf.ai" target="_blank"><i class="fas fa-voice"></i>Murf.ai - AI Voiceovers</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free-paid"></i> Free+Paid</span>
         <a href="https://www.suno.ai" target="_blank"><i class="fas fa-music"></i>Suno - AI Music Creation</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i> Free</span>
       </div>
     </div>
 
     <div id="video" class="tab-content">
       <div class="links">
         <a href="https://www.synthesia.io" target="_blank"><i class="fas fa-video"></i>Synthesia - AI Video Generation</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign paid"></i> Only Paid</span>
         <a href="https://www.pictory.ai" target="_blank"><i class="fas fa-film"></i>Pictory - Video Summarization</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free-paid"></i> Free+Paid</span>
       </div>
     </div>
 
     <div id="repositories" class="tab-content">
       <div class="links">
         <a href="https://theresanaiforthat.com/s/free/" target="_blank"><i class="fas fa-database"></i>There's an AI for That - AI Repository</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i> Free</span>
         <a href="https://www.aixploria.com" target="_blank"><i class="fa-regular fa-bookmark"></i>AI Tools Directory</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i> Free</span>
         <a href="https://www.futuretools.io/" target="_blank"><i class="fa-solid fa-bars"></i>future Tools - AI Tools Library</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i> Free</span>
+        <a href="https://www.aibase.co.il/tools?tab=Development+Tools" target="_blank"><i class="fas fa-music"></i>AIBase - AI Tools</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i> Free</span>
       </div>
     </div>
 
@@ -400,9 +443,13 @@
     <div id="ed-ai" class="tab-content">
       <div class="links">
         <a href="https://il.chat/ai-teacher-tools/" target="_blank"><i class="fas fa-school"></i>להוראה AI כלי</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i> Free</span>
         <a href="https://www.moital.gov.il/" target="_blank"><i class="fas fa-lightbulb"></i>AI Resources for Teachers (Hebrew)</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i> Free</span>
         <a href="https://www.telem.org.il/" target="_blank"><i class="fas fa-book"></i>Telem - Educational AI Tools</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i> Free</span>
         <a href="https://www.snunit.k12.il/" target="_blank"><i class="fas fa-graduation-cap"></i>Snunit - AI in Education</a>
+        <span class="pricing-scheme"><i class="fas fa-dollar-sign free"></i> Free</span>
       </div>
     </div>
   </div>
